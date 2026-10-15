@@ -1,0 +1,26 @@
+{
+  "tax_year": "2026/27",
+  "period": "6 April 2026 to 5 April 2027",
+  "region": "England (not Scottish rates)",
+  "retrieved_on": "2026-10-15",
+  "personal_allowance": {
+    "amount": 12570,
+    "source_url": "https://www.gov.uk/income-tax-rates"
+  },
+  "allowance_taper": {
+    "threshold": 100000,
+    "reduction_per_pound_over": 0.5,
+    "allowance_is_zero_from": 125140,
+    "description": "Allowance falls by 1 pound for every 2 pounds of adjusted net income above the threshold",
+    "source_url": "https://www.gov.uk/income-tax-rates"
+  },
+  "bands": {
+    "applies_to": "taxable income (income minus personal allowance)",
+    "source_url": "https://www.gov.uk/income-tax-rates",
+    "items": [
+      { "name": "Basic rate", "upper_limit": 37700, "rate": 0.20 },
+      { "name": "Higher rate", "upper_limit": 125140, "rate": 0.40 },
+      { "name": "Additional rate", "upper_limit": null, "rate": 0.45 }
+    ]
+  }
+}
