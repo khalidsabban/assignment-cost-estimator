@@ -1,0 +1,44 @@
+{
+  "retrieved_on": "2026-10-15",
+  "corridor": "Switzerland to UK",
+  "posting_rule": {
+    "max_months": 24,
+    "inclusive": true,
+    "wording": "Coming to work temporarily in the UK for up to 2 years.",
+    "convention_wording": "The anticipated duration must not exceed 24 months.",
+    "certificate": "Certificate of coverage (Portable Document A1)",
+    "certificate_issuer": "The employer's Swiss AHV compensation office",
+    "beyond_limit": "Continued Swiss coverage beyond the limit requires an exceptional agreement between the Swiss authority and HMRC. It is not automatic. Without one, UK National Insurance normally applies after the covered period ends.",
+    "source_url": "https://www.gov.uk/guidance/social-security-contributions-for-workers-coming-to-the-uk-from-the-eea-or-switzerland",
+    "convention_source_url": "https://assets.publishing.service.gov.uk/media/6697bfdaa3c2a28abb50d14e/TS_47.2024_UK_Switzerland_Convention_Social_Security_Coordination_with_corrections.pdf",
+    "certificate_source_url": "https://www.gov.uk/guidance/new-employee-coming-to-work-from-abroad"
+  },
+  "conditions": [
+    "The Swiss employer normally conducts substantial business in Switzerland.",
+    "The direct employment relationship with the Swiss employer continues throughout the assignment.",
+    "The employee is not replacing another posted worker.",
+    "The employee was covered by Swiss social security before the posting.",
+    "The anticipated assignment does not exceed the maximum posting period.",
+    "A valid certificate of coverage covers the whole assignment."
+  ],
+  "uk_employer_2026_27": {
+    "secondary_threshold_annual_gbp": 5000,
+    "class_1_rate": 0.15,
+    "class_1a_rate": 0.15,
+    "employment_allowance_gbp": 10500,
+    "employment_allowance_applied": false,
+    "employment_allowance_note": "An employer-level relief against employer Class 1 only, not against Class 1A and not per employee. Not applied in this estimate.",
+    "source_url": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+    "class_1a_exemption_source_url": "https://www.gov.uk/government/publications/cwg5-class-1a-national-insurance-contributions-on-benefits-in-kind/2025-class-1a-national-insurance-contributions-on-benefits-in-kind-termination-payments-and-sporting-testimonial-payments"
+  },
+  "swiss_rates_2026": {
+    "ahv_iv_eo_employee_rate": 0.053,
+    "ahv_iv_eo_employer_rate": 0.053,
+    "ahv_iv_eo_ceiling_chf": null,
+    "alv_employee_rate": 0.011,
+    "alv_employer_rate": 0.011,
+    "alv_ceiling_chf": 148200,
+    "source_url": "https://www.ahv-iv.ch/p/2.01.d",
+    "alv_source_url": "https://www.ahv-iv.ch/p/2.08.d"
+  }
+}
