@@ -1,0 +1,45 @@
+{
+  "tax_year": "2026/27",
+  "retrieved_on": "2026-10-15",
+  "relocation_exemption": {
+    "cap_gbp": 8000,
+    "applies_per": "employee per relocation",
+    "excess_treated_as": "taxable_benefit_in_kind",
+    "description": "Qualifying removal expenses and benefits are exempt up to the cap. The excess is taxable.",
+    "source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim03103",
+    "conditions_source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim03104",
+    "excess_source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim03138"
+  },
+  "items": {
+    "housing_rent": {
+      "label": "Housing in London",
+      "tag": "taxable_benefit_in_kind",
+      "reason": "Rent paid by the employer for the employee's home is taxable. Valued at the rent paid.",
+      "assumption": "The employer holds the tenancy and the rent exceeds the property's annual value. If the employee is the tenant, the same amount is taxed as earnings instead.",
+      "source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim11521",
+      "secondary_source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim11443"
+    },
+    "relocation_allowance": {
+      "label": "Relocation allowance",
+      "tag": "taxable_cash",
+      "reason": "A fixed cash allowance is not a reimbursement of actual qualifying expenses, so it is not exempt.",
+      "assumption": "Paid as a fixed allowance without receipts.",
+      "source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim03103",
+      "secondary_source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim03138"
+    },
+    "moving_costs": {
+      "label": "Moving costs (flights, shipping)",
+      "tag": "qualifying_relocation",
+      "reason": "Travel and transport of belongings for a job-related move count towards the shared exemption cap.",
+      "source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim03113"
+    },
+    "temporary_housing": {
+      "label": "Temporary housing (serviced apartment)",
+      "tag": "qualifying_relocation",
+      "reason": "Temporary living accommodation before moving into the permanent home counts towards the shared exemption cap, valued at the employer's cost.",
+      "assumption": "The employee intends to move into the rented London flat as permanent accommodation.",
+      "source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim03117",
+      "secondary_source_url": "https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim03118"
+    }
+  }
+}
