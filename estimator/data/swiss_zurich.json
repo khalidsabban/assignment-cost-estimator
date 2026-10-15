@@ -1,0 +1,111 @@
+{
+  "tax_year": 2026,
+  "jurisdiction": "City of Zurich, canton of Zurich, Switzerland",
+  "currency": "CHF",
+  "retrieved_on": "2026-10-15",
+  "language_note": "Most underlying Swiss sources are published in German. The federal tariff is multilingual.",
+  "social_security": {
+    "ahv_iv_eo_employee_rate": 0.053,
+    "ahv_iv_eo_ceiling_chf": null,
+    "alv_employee_rate": 0.011,
+    "alv_ceiling_chf": 148200,
+    "excludes": "Occupational pension (BVG) and accident insurance, as instructed by the assignment pack.",
+    "source_url": "https://www.ahv-iv.ch/p/2.01.d",
+    "alv_source_url": "https://www.ahv-iv.ch/p/2.08.d"
+  },
+  "deductions": {
+    "professional_expenses": {
+      "rate_of_net_pay": 0.03,
+      "minimum_chf": 2000,
+      "maximum_chf": 4000,
+      "applies_to": "both",
+      "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/steuern-finanzen/steuern/natuerlichepersonen/2026/est-formulare-uj/360%20Berufsauslagen%20ZH%202026.pdf"
+    },
+    "insurance_premiums": {
+      "federal_cap_chf": 1800,
+      "cantonal_cap_chf": 2900,
+      "assumption": "Qualifying premiums after subsidies are sufficient to use the full single-person cap, with pillar 2 or 3a contributions made. These are capped deductions, not automatic allowances.",
+      "federal_source_url": "https://www.estv.admin.ch/de/abzuege-ansaetze-tarife-direkte-bundessteuer",
+      "cantonal_source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/steuern-finanzen/steuern/natuerlichepersonen/2026/est-formulare-uj/365%20Versicherung%20ZH%202026.pdf"
+    },
+    "excluded": [
+      "Actual occupational pension (BVG) and accident insurance contributions",
+      "Commuting and qualifying meal costs",
+      "Pillar 3a contributions",
+      "Debt interest, donations, dependants and other individual deductions"
+    ]
+  },
+  "rounding": {
+    "taxable_income_down_to_chf": 100,
+    "federal_tax_down_to_chf": 0.05,
+    "note": "Federal taxable income is rounded down to CHF 100 under the published tariff. The same rounding is applied to the Zurich tax base in this model."
+  },
+  "federal_tariff": {
+    "name": "Grundtarif (single person), direct federal tax",
+    "description": "Select the greatest lower threshold not exceeding taxable income. Tax is the base at that threshold plus the marginal rate applied to the excess.",
+    "bands": [
+      { "threshold": 0, "base": 0, "rate": 0 },
+      { "threshold": 15200, "base": 0, "rate": 0.0077 },
+      { "threshold": 33200, "base": 138.60, "rate": 0.0088 },
+      { "threshold": 43500, "base": 229.20, "rate": 0.0264 },
+      { "threshold": 58000, "base": 612.00, "rate": 0.0297 },
+      { "threshold": 76200, "base": 1152.50, "rate": 0.0594 },
+      { "threshold": 82100, "base": 1502.95, "rate": 0.0660 },
+      { "threshold": 108900, "base": 3271.75, "rate": 0.0880 },
+      { "threshold": 141500, "base": 6140.55, "rate": 0.1100 },
+      { "threshold": 185100, "base": 10936.55, "rate": 0.1320 }
+    ],
+    "flat_rate_above": { "threshold": 794000, "rate": 0.115 },
+    "source_url": "https://www.estv.admin.ch/dam/de/sd-web/gnde9CmEsalK/dbst-tairfe-58c-2026-dfi.pdf",
+    "law_source_url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de?version=20261231"
+  },
+  "cantonal_simple_tax_tariff": {
+    "name": "Grundtarif (single person), einfache Staatssteuer",
+    "description": "The simple tax is an intermediate figure. It is calculated once and multiplied by each multiplier.",
+    "bands": [
+      { "threshold": 0, "base": 0, "rate": 0 },
+      { "threshold": 7000, "base": 0, "rate": 0.02 },
+      { "threshold": 12000, "base": 100, "rate": 0.03 },
+      { "threshold": 16800, "base": 244, "rate": 0.04 },
+      { "threshold": 24800, "base": 564, "rate": 0.05 },
+      { "threshold": 34500, "base": 1049, "rate": 0.06 },
+      { "threshold": 45700, "base": 1721, "rate": 0.07 },
+      { "threshold": 58800, "base": 2638, "rate": 0.08 },
+      { "threshold": 76400, "base": 4046, "rate": 0.09 },
+      { "threshold": 110400, "base": 7106, "rate": 0.10 },
+      { "threshold": 144100, "base": 10476, "rate": 0.11 },
+      { "threshold": 197400, "base": 16339, "rate": 0.12 },
+      { "threshold": 266700, "base": 24655, "rate": 0.13 }
+    ],
+    "source_url": "https://www.notes.zh.ch/appl/zhlex_r.nsf/WebView/27A2B2527CE30B98C1258D2A0028E439/$File/631.1_8.6.97_131.pdf"
+  },
+  "multipliers": {
+    "canton_zurich": 0.95,
+    "city_of_zurich": 1.19,
+    "excludes_church_tax": true,
+    "canton_source_url": "https://www.notes.zh.ch/appl/zhlex_r.nsf/WebView/158CE7E50A0C227DC1258D7E00392B82/$File/631.21.pdf",
+    "city_source_url": "https://www.stadt-zuerich.ch/steuerberechnung"
+  },
+  "excluded_from_model": [
+    "Church tax",
+    "Wealth tax",
+    "Personal tax (CHF 24 in the city of Zurich)"
+  ],
+  "calculator_check": {
+    "tool": "ESTV income and wealth tax calculator, version 2.1.3",
+    "accessed_on": "2026-10-15",
+    "url": "https://swisstaxcalculator.estv.admin.ch/#/calculator/income-wealth-tax",
+    "matching_tax_base_run": {
+      "inputs": "Tax year 2026, municipality 8001 Zurich, single, no children, no church affiliation, zero wealth, taxable income supplied directly as CHF 152,400 cantonal and CHF 153,500 federal",
+      "cantonal_chf": 10820,
+      "communal_chf": 13553,
+      "federal_chf": 7461,
+      "income_tax_subtotal_chf": 31834
+    },
+    "gross_income_run": {
+      "inputs": "Same, but gross employment income of CHF 170,000 with the calculator's own default deductions",
+      "income_tax_subtotal_chf": 29554,
+      "note": "The calculator additionally deducted occupational pension and accident insurance contributions, which this model excludes on the pack's instruction. The model is about 7.7% higher as a result."
+    }
+  }
+}

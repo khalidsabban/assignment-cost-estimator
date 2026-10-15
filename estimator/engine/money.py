@@ -1,4 +1,4 @@
-from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
+from decimal import Decimal, InvalidOperation, ROUND_HALF_UP, ROUND_DOWN
 
 from .errors import InvalidInputError
 
@@ -37,3 +37,11 @@ def to_gbp(amount, currency, chf_per_gbp, field_name="Amount"):
         return round_money(amount / rate)
 
     raise InvalidInputError(f"Unsupported currency: {currency!r}. Use GBP or CHF.")
+
+def round_down_to(amount, multiple):
+    """Round down to the nearest multiple, for Swiss tax-base rounding."""
+    multiple = to_decimal(multiple, "Rounding multiple")
+    if multiple <= 0:
+        raise InvalidInputError("Rounding multiple must be greater than zero.")
+    return (amount / multiple).to_integral_value(rounding=ROUND_DOWN) * multiple
+ 
