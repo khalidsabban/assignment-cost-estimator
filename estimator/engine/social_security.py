@@ -126,9 +126,10 @@ def employer_charges(decision, ni_liable_earnings_gbp, class_1a_benefits_gbp):
             class_1a_gbp=ZERO,
             basis=(
                 f"No UK employer National Insurance. The employee remains in the "
-                f"{decision.country} system under the posting rule, evidenced by a "
-                f"{decision.certificate}. Class 1A also stops where an agreement "
-                f"makes the employee liable only to the other country's system."
+                f"home country's social security system ({decision.country}) under "
+                f"the posting rule, evidenced by a {decision.certificate}. Class 1A "
+                f"also stops where an agreement makes the employee liable only to "
+                f"the other country's system."
             ),
             source_urls=(
                 uk["source_url"],
