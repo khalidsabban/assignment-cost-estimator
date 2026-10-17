@@ -11,6 +11,8 @@
          margin: 0; color: #1a1a1a; background: #f6f7f8; line-height: 1.5; }
   .page { max-width: 1000px; margin: 0 auto; padding: 24px 16px 64px; }
   h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 0 0 12px; }
+  h3 { font-size: 1rem; margin: 24px 0 4px; color: var(--accent); }
   .lede { color: var(--muted); margin: 0 0 24px; }
   .tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--line); margin-bottom: 24px; }
   .tabs a { padding: 10px 18px; text-decoration: none; color: var(--muted);
@@ -28,6 +30,7 @@
             padding: 12px; border-radius: 4px; margin-bottom: 16px; }
   button { background: var(--accent); color: #fff; border: 0; padding: 11px 22px;
            border-radius: 4px; font-size: 0.95rem; cursor: pointer; margin-top: 16px; }
+  .scroll { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; }
   th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line);
            vertical-align: top; font-size: 0.9rem; }
@@ -42,6 +45,14 @@
   .headline div span { display: block; color: var(--muted); font-size: 0.78rem; }
   .headline div strong { font-size: 1.3rem; }
   ol.assumptions li { margin-bottom: 6px; font-size: 0.86rem; }
+  .req { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  .req:last-of-type { border-bottom: 0; }
+  .req h4 { margin: 0 0 4px; font-size: 0.95rem; }
+  .req p { margin: 0 0 8px; font-size: 0.9rem; }
+  .facts { display: flex; gap: 24px; flex-wrap: wrap; font-size: 0.82rem; }
+  .facts div { max-width: 340px; }
+  .facts span { display: block; color: var(--muted); text-transform: uppercase;
+                font-size: 0.68rem; letter-spacing: 0.04em; }
 </style>
 </head>
 <body>
@@ -85,26 +96,28 @@
   {% for year in estimate.years %}
   <div class="card">
     <h2>Year {{ year.year }}</h2>
-    <table>
-      <tr><th>Item</th><th class="num">Amount (£)</th></tr>
-      {% for section in year.sections %}
-      <tr class="section"><td>{{ section.title }}</td><td class="num">{{ section.total_gbp|floatformat:2|intcomma }}</td></tr>
-        {% for line in section.lines %}
-        <tr>
-          <td>{{ line.label }}
-            {% if line.note %}<div class="note">{{ line.note }}
-              {% for url in line.source_urls %}<a href="{{ url }}" target="_blank" rel="noopener">[source {{ forloop.counter }}]</a> {% endfor %}
-            </div>{% endif %}
-          </td>
-          <td class="num">{{ line.amount_gbp|floatformat:2|intcomma }}</td>
-        </tr>
+    <div class="scroll">
+      <table>
+        <tr><th>Item</th><th class="num">Amount (£)</th></tr>
+        {% for section in year.sections %}
+        <tr class="section"><td>{{ section.title }}</td><td class="num">{{ section.total_gbp|floatformat:2|intcomma }}</td></tr>
+          {% for line in section.lines %}
+          <tr>
+            <td>{{ line.label }}
+              {% if line.note %}<div class="note">{{ line.note }}
+                {% for url in line.source_urls %}<a href="{{ url }}" target="_blank" rel="noopener">[source {{ forloop.counter }}]</a> {% endfor %}
+              </div>{% endif %}
+            </td>
+            <td class="num">{{ line.amount_gbp|floatformat:2|intcomma }}</td>
+          </tr>
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
-      <tr class="total">
-        <td>Total employer cost, year {{ year.year }} ({{ year.multiple_of_home_pay }}x home pay)</td>
-        <td class="num">{{ year.total_employer_cost_gbp|floatformat:2|intcomma }}</td>
-      </tr>
-    </table>
+        <tr class="total">
+          <td>Total employer cost, year {{ year.year }} ({{ year.multiple_of_home_pay }}x home pay)</td>
+          <td class="num">{{ year.total_employer_cost_gbp|floatformat:2|intcomma }}</td>
+        </tr>
+      </table>
+    </div>
 
     <details>
       <summary>Show the gross-up working</summary>
@@ -114,12 +127,14 @@
         and the personal allowance is withdrawn above £100,000, so one multiplication
         gives the wrong answer.
       </p>
-      <table>
-        <tr><td>UK taxable pay before tax (I)</td><td class="num">£{{ year.uk_taxable_pay_gbp|floatformat:2|intcomma }}</td></tr>
-        <tr><td>Tax on that pay alone (one pass)</td><td class="num">£{{ year.uk_tax_without_gross_up_gbp|floatformat:2|intcomma }}</td></tr>
-        <tr><td>Tax after grossing up (T)</td><td class="num">£{{ year.uk_tax_gbp|floatformat:2|intcomma }}</td></tr>
-        <tr><td>Iterations to settle</td><td class="num">{{ year.gross_up_iterations }}</td></tr>
-      </table>
+      <div class="scroll">
+        <table>
+          <tr><td>UK taxable pay before tax (I)</td><td class="num">£{{ year.uk_taxable_pay_gbp|floatformat:2|intcomma }}</td></tr>
+          <tr><td>Tax on that pay alone (one pass)</td><td class="num">£{{ year.uk_tax_without_gross_up_gbp|floatformat:2|intcomma }}</td></tr>
+          <tr><td>Tax after grossing up (T)</td><td class="num">£{{ year.uk_tax_gbp|floatformat:2|intcomma }}</td></tr>
+          <tr><td>Iterations to settle</td><td class="num">{{ year.gross_up_iterations }}</td></tr>
+        </table>
+      </div>
     </details>
   </div>
   {% endfor %}
@@ -136,22 +151,47 @@
   <div class="card">
     <h2>Immigration</h2>
     {% if immigration.categories %}
+      <p class="note">Checked against GOV.UK on {{ immigration.checked_on }}. {{ immigration.case }}</p>
+
+      <h3>Route</h3>
+      <p><strong>{{ immigration.route_choice.chosen }}</strong></p>
+      <p class="note">{{ immigration.route_choice.reason }}
+        <a href="{{ immigration.route_choice.source_url }}" target="_blank" rel="noopener">[source]</a></p>
+      <p class="note"><strong>Alternative:</strong> {{ immigration.route_choice.alternative }}
+        <a href="{{ immigration.route_choice.alternative_source_url }}" target="_blank" rel="noopener">[source]</a></p>
+      <p class="note"><strong>Conditional on:</strong> {{ immigration.route_choice.conditional_on }}</p>
+
       {% for category in immigration.categories %}
       <h3>{{ category.title }}</h3>
-      <table>
-        <tr><th>Requirement</th><th>Detail</th><th class="num">Cost</th><th class="num">Time</th></tr>
-        {% for item in category.items %}
-        <tr>
-          <td>{{ item.requirement }}
-            <div class="note"><a href="{{ item.source_url }}" target="_blank" rel="noopener">source</a></div>
-          </td>
-          <td>{{ item.detail }}</td>
-          <td class="num">{{ item.cost }}</td>
-          <td class="num">{{ item.time }}</td>
-        </tr>
-        {% endfor %}
-      </table>
+woo      {% for item in category.items %}
+      <div class="req">
+        <h4>{{ item.requirement }}</h4>
+        <p>{{ item.detail }}</p>
+        <div class="facts">
+          <div><span>Cost</span>{{ item.cost }}</div>
+          <div><span>Time</span>{{ item.time }}</div>
+          <div><span>Source</span><a href="{{ item.source_url }}" target="_blank" rel="noopener">GOV.UK</a></div>
+        </div>
+      </div>
       {% endfor %}
+      {% endfor %}
+
+      <h3>Indicative cost</h3>
+      <div class="scroll">
+        <table>
+          <tr><th>Scenario</th><th class="num">Cost (£)</th></tr>
+          <tr><td>Per assignment, small or charitable sponsor</td><td class="num">{{ immigration.cost_summary.per_assignment_small_sponsor_gbp|floatformat:2|intcomma }}</td></tr>
+          <tr><td>Per assignment, medium or large sponsor</td><td class="num">{{ immigration.cost_summary.per_assignment_large_sponsor_gbp|floatformat:2|intcomma }}</td></tr>
+          <tr><td>Including a new licence, small or charitable</td><td class="num">{{ immigration.cost_summary.with_new_licence_small_sponsor_gbp|floatformat:2|intcomma }}</td></tr>
+          <tr><td>Including a new licence, medium or large</td><td class="num">{{ immigration.cost_summary.with_new_licence_large_sponsor_gbp|floatformat:2|intcomma }}</td></tr>
+        </table>
+      </div>
+      <p class="note">{{ immigration.cost_summary.includes }}. {{ immigration.cost_summary.note }}</p>
+
+      <h3>Facts still to confirm</h3>
+      <ul class="note">
+        {% for fact in immigration.outstanding_facts %}<li>{{ fact }}</li>{% endfor %}
+      </ul>
     {% else %}
       <p class="note">Immigration requirements have not been added yet.</p>
     {% endif %}

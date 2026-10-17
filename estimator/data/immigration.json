@@ -1,0 +1,201 @@
+{
+  "corridor": "Switzerland to United Kingdom",
+  "checked_on": "2026-10-16",
+  "case": "Swiss national, three years with the Swiss employer, two-year transfer to a related UK subsidiary, no dependants, no existing UK permission.",
+  "route_choice": {
+    "chosen": "Global Business Mobility: Senior or Specialist Worker",
+    "reason": "It fits a temporary intra-group assignment between businesses with a qualifying link. There is no English language requirement and no minimum prior overseas service at this salary level.",
+    "alternative": "Skilled Worker, which is viable if its conditions are met and preferable where a future settlement route matters. It has no equivalent intra-group link requirement, but does require B2 English and excludes bonus pay from the qualifying salary.",
+    "conditional_on": "The actual occupation code, duties, hours, qualifying salary on the certificate of sponsorship, and the sponsor's licence and group relationship.",
+    "source_url": "https://www.gov.uk/senior-specialist-worker-visa/eligibility",
+    "alternative_source_url": "https://www.gov.uk/skilled-worker-visa/your-job"
+  },
+  "fee_cross_check_url": "https://www.gov.uk/government/publications/visa-regulations-revised-table/home-office-immigration-and-nationality-fees-8-october-2026",
+  "categories": [
+    {
+      "title": "Work permit",
+      "items": [
+        {
+          "requirement": "Route and sponsorship",
+          "detail": "Global Business Mobility, Senior or Specialist Worker. The UK sponsor must hold the correct route permission, and the overseas and UK businesses must have a qualifying link such as common ownership or control.",
+          "cost": "See sponsor licence below",
+          "time": "Arranged before the visa application",
+          "source_url": "https://www.gov.uk/government/publications/sponsor-a-global-business-mobility-worker/workers-and-temporary-workers-sponsor-a-global-business-mobility-worker-accessible"
+        },
+        {
+          "requirement": "Prior overseas employment",
+          "detail": "Normally 12 months with the overseas business where qualifying annual pay is below £73,900, and no minimum period at or above that level. Three years satisfies the ordinary duration test, assuming the employment qualifies.",
+          "cost": "No fee",
+          "time": "Already met",
+          "source_url": "https://www.gov.uk/senior-specialist-worker-visa/eligibility"
+        },
+        {
+          "requirement": "Salary threshold",
+          "detail": "At least the higher of £52,500 and the occupation's going rate. Base salary of CHF 150,000 is about £136,364 at the assignment's exchange rate, which clears the general threshold. This is an illustrative conversion, not the immigration salary assessment: the figure on the certificate of sponsorship governs, and bonus pay is excluded from the Skilled Worker qualifying salary.",
+          "cost": "No fee",
+          "time": "Confirm before assigning the certificate",
+          "source_url": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-business-mobility-routes"
+        },
+        {
+          "requirement": "Visa application from outside the UK",
+          "detail": "Standard adult applicant on the up to three year fee band. A person visiting before the assignment cannot switch into this route from inside the UK, so plan an overseas application. Apply no more than three months before the job start date on the certificate.",
+          "cost": "£819",
+          "time": "Usually 3 weeks after application, identity verification and documents",
+          "source_url": "https://www.gov.uk/senior-specialist-worker-visa/how-much-it-costs"
+        },
+        {
+          "requirement": "Immigration Health Surcharge",
+          "detail": "£1,035 a year, charged in six-month increments for the duration of the permission granted. Permission normally runs 14 days beyond the job end date, so a full two-year assignment usually exceeds two years and falls into the next increment. Budget for the longer band rather than assuming the two-year figure of £2,070. Continued Swiss social security does not remove this upfront charge, though a qualifying Swiss S1 certificate registered with NHSBSA can support later reimbursement.",
+          "cost": "£2,587.50 (two to two and a half years)",
+          "time": "Paid upfront with the application",
+          "source_url": "https://www.gov.uk/healthcare-immigration-application/how-much-pay"
+        },
+        {
+          "requirement": "Certificate of sponsorship",
+          "detail": "Assigned by the sponsor before the visa application, and paid by the sponsor. Must be used within three months of assignment.",
+          "cost": "£525",
+          "time": "Undefined certificate from the sponsor's existing allocation",
+          "source_url": "https://www.gov.uk/uk-visa-sponsorship-employers/certificates-of-sponsorship"
+        },
+        {
+          "requirement": "Immigration Skills Charge",
+          "detail": "Paid by the sponsor when assigning the certificate, based on the employment dates. The exemption for certain EU nationals transferring from an EU business does not cover a Swiss national from a Swiss business. Occupational exemptions may still apply, so confirm the occupation code.",
+          "cost": "£960 small or charitable sponsor, £2,640 medium or large, for two years",
+          "time": "Paid when the certificate is assigned",
+          "source_url": "https://www.gov.uk/uk-visa-sponsorship-employers/immigration-skills-charge"
+        },
+        {
+          "requirement": "Maintenance funds",
+          "detail": "£1,270 available to the applicant, normally held for 28 consecutive days ending within 31 days before the application. The sponsor may certify maintenance instead. This is evidence of funds, not a fee.",
+          "cost": "Not a fee",
+          "time": "28 days before applying",
+          "source_url": "https://www.gov.uk/senior-specialist-worker-visa/how-much-it-costs"
+        }
+      ]
+    },
+    {
+      "title": "Business visit before the assignment",
+      "items": [
+        {
+          "requirement": "Visitor permission",
+          "detail": "A Swiss national does not normally need a visitor visa for permitted short business activities, but needs an Electronic Travel Authorisation unless exempt.",
+          "cost": "No visa fee",
+          "time": "Up to 6 months per visit",
+          "source_url": "https://www.gov.uk/guidance/visiting-the-uk-as-an-eu-eea-or-swiss-citizen"
+        },
+        {
+          "requirement": "Permitted activities",
+          "detail": "Meetings, conferences, contract negotiations, site visits and qualifying internal training or knowledge sharing. The UK assignment must not begin, and ordinary UK employment must not be undertaken, while in the UK as a visitor.",
+          "cost": "No fee",
+          "time": "During a genuine temporary visit only",
+          "source_url": "https://www.gov.uk/standard-visitor/visit-on-business"
+        },
+        {
+          "requirement": "Electronic Travel Authorisation",
+          "detail": "A travel authorisation rather than permission to work, and not a guarantee of admission. No separate authorisation is needed once the person holds applicable UK permission to live, work or study.",
+          "cost": "£20",
+          "time": "Usually within a day, but allow up to 3 working days and wait for approval before travelling",
+          "source_url": "https://www.gov.uk/eta"
+        },
+        {
+          "requirement": "Authorisation validity",
+          "detail": "Linked to the passport used in the application. A replacement passport requires a new authorisation. It allows repeat visits, not two years of residence.",
+          "cost": "Included above",
+          "time": "Two years or passport expiry, whichever is first",
+          "source_url": "https://www.gov.uk/eta/apply"
+        }
+      ]
+    },
+    {
+      "title": "Passport and digital status",
+      "items": [
+        {
+          "requirement": "Passport validity",
+          "detail": "A Swiss traveller should hold a passport valid throughout the stay. No general additional six-month validity requirement is stated for Swiss nationals. National identity card exceptions concern specific protected statuses and are not assumed here.",
+          "cost": "Swiss renewal costs are outside this research",
+          "time": "Check before applying and before travelling",
+          "source_url": "https://www.gov.uk/guidance/visiting-the-uk-as-an-eu-eea-or-swiss-citizen"
+        },
+        {
+          "requirement": "Linking the permission to the passport",
+          "detail": "UK immigration status is digital. The current travel passport must be added to the UKVI account and match the details given to the carrier. Renewing the passport means updating the account, not obtaining a new work visa.",
+          "cost": "No separate fee identified",
+          "time": "Before every journey, and whenever passport details change",
+          "source_url": "https://www.gov.uk/evisa/travel-with-evisa"
+        }
+      ]
+    },
+    {
+      "title": "What the company must do",
+      "items": [
+        {
+          "requirement": "Sponsor licence",
+          "detail": "The Worker licence fee category covers this route. Confirm whether an existing licence already covers the route and the group relationship, in which case no new fee arises. A priority service costs £750 extra and aims for 10 working days.",
+          "cost": "£611 small or charitable, £1,682 medium or large",
+          "time": "Most decisions in under 8 weeks",
+          "source_url": "https://www.gov.uk/uk-visa-sponsorship-employers/apply-for-your-licence"
+        },
+        {
+          "requirement": "Confirm sponsor size",
+          "detail": "Usually small if at least two of these apply: turnover of £15m or less, assets of £7.5m or less, 50 employees or fewer. Do not infer the classification from one subsidiary's headcount alone, because it decides both the licence fee and the skills charge.",
+          "cost": "No fee",
+          "time": "Before calculating fees",
+          "source_url": "https://www.gov.uk/uk-visa-sponsorship-employers/apply-for-your-licence"
+        },
+        {
+          "requirement": "Assign the certificate of sponsorship",
+          "detail": "This route uses an undefined certificate from the sponsor's allocation. Record the occupation, salary, hours and dates accurately. Requests for extra undefined allocation can take up to 12 weeks, so plan ahead.",
+          "cost": "£525, included above",
+          "time": "Up to 12 weeks if extra allocation is needed",
+          "source_url": "https://www.gov.uk/uk-visa-sponsorship-employers/certificates-of-sponsorship"
+        },
+        {
+          "requirement": "Right to work check",
+          "detail": "Use the employer online service with the worker's share code and date of birth, verify identity and permitted work, and keep dated evidence. A passport or certificate of sponsorship alone is not sufficient proof.",
+          "cost": "No fee",
+          "time": "Before work begins, and again before time-limited permission expires",
+          "source_url": "https://www.gov.uk/check-job-applicant-right-to-work"
+        },
+        {
+          "requirement": "Record keeping",
+          "detail": "Keep immigration and identity evidence, contact details, attendance, role and contract, pay records and relevant qualifications, as set out in Appendix D.",
+          "cost": "Internal administration",
+          "time": "Through the sponsorship, and ordinarily until the earlier of one year after it ends or compliance approval after it ends",
+          "source_url": "https://www.gov.uk/government/publications/keep-records-for-sponsorship-appendix-d/workers-and-temporary-workers-guidance-for-sponsors-appendix-d-record-keeping-duties-accessible"
+        },
+        {
+          "requirement": "Reporting duties",
+          "detail": "Report relevant worker changes such as early termination, reportable job or pay changes and unauthorised absence, and report significant business changes through the sponsorship management system.",
+          "cost": "Internal administration",
+          "time": "Normally 10 working days for worker changes and 20 for organisational changes",
+          "source_url": "https://www.gov.uk/government/publications/workers-and-temporary-workers-guidance-for-sponsors-part-3-sponsor-duties-and-compliance/workers-and-temporary-workers-guidance-for-sponsors-part-3-sponsor-duties-and-compliance-accessible"
+        },
+        {
+          "requirement": "Sponsor bears the charges",
+          "detail": "The sponsor must pay the licence, certificate and skills charge costs, and must not pass them or prohibited associated costs to the worker.",
+          "cost": "As above",
+          "time": "At each application or assignment stage",
+          "source_url": "https://www.gov.uk/uk-visa-sponsorship-employers/immigration-skills-charge"
+        }
+      ]
+    }
+  ],
+  "cost_summary": {
+    "note": "Calculated totals for this case, not published package prices. The licence fee is a company-level setup cost, not an annual per-employee charge, so it is shown separately. Excludes professional advice, optional expedited services, translations and any English language evidence.",
+    "per_assignment_small_sponsor_gbp": 4891.50,
+    "per_assignment_large_sponsor_gbp": 6571.50,
+    "with_new_licence_small_sponsor_gbp": 5502.50,
+    "with_new_licence_large_sponsor_gbp": 8253.50,
+    "includes": "Visa application, health surcharge, certificate of sponsorship and skills charge"
+  },
+  "outstanding_facts": [
+    "The precise role, occupation code and duties",
+    "Weekly hours and the qualifying salary recorded on the certificate of sponsorship",
+    "Whether the sponsor already holds a licence covering this route, and its allocation",
+    "The sponsor's size classification",
+    "Any prior UK immigration history",
+    "English language evidence, if the Skilled Worker route is used instead",
+    "The actual permission dates, which decide the health surcharge band",
+    "S1 certificate eligibility, if health surcharge reimbursement is to be modelled"
+  ]
+}
