@@ -93,6 +93,23 @@ This is an exercise, not tax advice.
 
 ## AI tools used
 
+## AI tools used
+
+**OpenAI GPT-6 Astra** was used for research assistance on the UK tax
+treatment of benefits, the UK-Switzerland social security position and UK
+immigration routes. Every figure and rule was then verified against the
+official source cited in the output, and the Swiss calculation was checked
+against the Swiss Federal Tax Administration calculator.
+
+**Claude Opus 5.5** was used for drafting and reviewing code, including the
+Django layer and the test suite.
+
+**Both models** were used for reviewing the structure of the project.
+
+**Notion** was used for tracking progress through the build.
+
+All code in this repository was written with AI assistance and then reviewed,
+tested and verified by me. I can explain every part of it.
 
 ## Known limitations
 
