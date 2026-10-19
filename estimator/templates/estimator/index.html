@@ -90,7 +90,11 @@
       <div><span>Multiple of home pay</span><strong>{{ estimate.multiple_of_home_pay }}x</strong></div>
       <div><span>Social security</span><strong>{{ estimate.coverage.country }}</strong></div>
     </div>
-    <p class="note">{{ estimate.coverage.rule }}</p>
+    <p class="note">{{ estimate.coverage.rule }}
+      <a href="{{ estimate.coverage.source_urls.0 }}" target="_blank" rel="noopener">[GOV.UK posting rule]</a>
+      <a href="{{ estimate.coverage.source_urls.1 }}" target="_blank" rel="noopener">[UK–Swiss convention]</a>
+      <a href="{{ estimate.coverage.source_urls.2 }}" target="_blank" rel="noopener">[A1 certificate]</a>
+    </p>
   </div>
 
   {% for year in estimate.years %}
@@ -163,7 +167,7 @@
 
       {% for category in immigration.categories %}
       <h3>{{ category.title }}</h3>
-woo      {% for item in category.items %}
+         {% for item in category.items %}
       <div class="req">
         <h4>{{ item.requirement }}</h4>
         <p>{{ item.detail }}</p>

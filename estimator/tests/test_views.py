@@ -39,6 +39,13 @@ class IndexViewTests(TestCase):
         response = self.client.post(reverse("estimator:index"), data)
         self.assertIn("host_country", response.context["form"].errors)
 
+    def test_social_security_rule_links_to_its_sources(self):
+        response = self.client.get("/")
+        estimate = response.context["estimate"]
+        html = response.content.decode()
+        for url in estimate.coverage.source_urls:
+            self.assertIn(f'href="{url}"', html)
+
     def _defaults(self):
         from estimator.views import TEST_CASE_DEFAULTS
 
