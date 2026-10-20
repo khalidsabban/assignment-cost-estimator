@@ -93,8 +93,6 @@ This is an exercise, not tax advice.
 
 ## AI tools used
 
-## AI tools used
-
 **OpenAI GPT-6 Astra** was used for research assistance on the UK tax
 treatment of benefits, the UK-Switzerland social security position and UK
 immigration routes. Every figure and rule was then verified against the
