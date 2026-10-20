@@ -65,7 +65,6 @@ configuration is needed. See `.env.example`.
     estimator/tests/        tests for every module above, plus the views
     estimator/forms.py      input validation
     estimator/views.py      passes inputs in and renders the result
-    docs/                   assumptions and the research behind each figure
 
 The calculation engine does not import Django, so it can be tested without a
 server. Rules live in data files rather than in code, so every figure in the
@@ -86,8 +85,7 @@ calculator: supplying the same taxable income, it returns CHF 31,834 of
 income tax against this tool's CHF 31,833.01. Running that calculator from
 gross pay with its own default deductions returns CHF 29,554, because it
 also deducts occupational pension and accident insurance, which the
-assignment pack instructs us to exclude. That difference is documented
-rather than hidden. The research behind each figure is in `docs/`.
+assignment pack instructs us to exclude. 
 
 This is an exercise, not tax advice.
 
