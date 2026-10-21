@@ -6,7 +6,7 @@ employer under tax equalisation, and sets out the immigration requirements.
 Test case: an employee sent from Switzerland (city of Zurich) to the UK
 (London) for two years, 6 April 2026 to 5 April 2028.
 
-Loom walkthrough: 
+Loom walkthrough: https://www.loom.com/share/2c2f92ebf8364b55a6e699a6c6140a02
 
 ## What it does
 
@@ -65,6 +65,7 @@ configuration is needed. See `.env.example`.
     estimator/tests/        tests for every module above, plus the views
     estimator/forms.py      input validation
     estimator/views.py      passes inputs in and renders the result
+    docs/                   assumptions and the research behind each figure
 
 The calculation engine does not import Django, so it can be tested without a
 server. Rules live in data files rather than in code, so every figure in the
@@ -81,11 +82,12 @@ official page it came from. The full assumptions list is in
 `docs/ASSUMPTIONS.md` and is also shown under the cost table.
 
 The Swiss figures were checked against the Swiss Federal Tax Administration
-calculator: supplying the same taxable income, it returns CHF 31,834 of
+calculator. Supplying the same taxable income, it returns CHF 31,834 of
 income tax against this tool's CHF 31,833.01. Running that calculator from
 gross pay with its own default deductions returns CHF 29,554, because it
 also deducts occupational pension and accident insurance, which the
-assignment pack instructs us to exclude. 
+assignment pack instructs us to exclude. That difference is documented
+rather than hidden. The research behind each figure is in `docs/`. 
 
 This is an exercise, not tax advice.
 
@@ -97,15 +99,13 @@ immigration routes. Every figure and rule was then verified against the
 official source cited in the output, and the Swiss calculation was checked
 against the Swiss Federal Tax Administration calculator.
 
-**Claude Opus 5.5** was used for drafting and reviewing code, including the
-Django layer and the test suite.
+**Claude Opus 5.5** was used to review and improve parts of the code, including the Django layer, and to generate the automated tests.
 
-**Both models** were used for reviewing the structure of the project.
+**Both models** were used to review the overall project structure.
 
 **Notion** was used for tracking progress through the build.
 
-All code in this repository was written with AI assistance and then reviewed,
-tested and verified by me. I can explain every part of it.
+I wrote most of the application code myself, using AI to help with debugging, code reviews and improvements. AI was also used to generate the test code, which I reviewed, ran and verified. I understand the implementation and can explain the decisions behind it.
 
 ## Known limitations
 
