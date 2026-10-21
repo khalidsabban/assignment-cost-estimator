@@ -13,7 +13,7 @@ they had stayed at home, so the employer pays the UK tax and recovers the
 employee's usual home tax burden through the hypothetical deductions.
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from decimal import Decimal
 
 from .benefits import TAXABLE_CASH, assess_benefits
